@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnvioData</title>
+</head>
+<body>
+    <form action="api.php" method="post">
+        <input type="text" pattern="[0-9-.-,]+" name="num1">
+        <select name="operación" id="">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" pattern="[0-9-.-,]+" name="num2">
+        <input type="submit" value="=">
+    </form>
+</body>
+</html>
+
+
+<!-- <a href="api.php?b=1">1</a>
+<a href="api.php?b=2">2</a>
+<a href="api.php?b=3">3</a>
+<a href="api.php?b=4">4</a>
+<a href="api.php?b=5">5</a>
+<a href="api.php?b=6">6</a>
+<a href="api.php?b=7">7</a>
+<a href="api.php?b=8">8</a>
+<a href="api.php?b=9">9</a>
+<a href="api.php?b=0">0</a>
+
+<select name="operador" id="operador">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+</select>
+
+<a href="api.php?b=equals" id="equals-link">=</a> -->
+
+
+<!-- <form action="api.php" method="post">
+        <button type="submit" name="b1" >1</button>
+        <button type="submit" name="b2" >2</button>
+        <button type="submit" name="b3" >3</button>
+        <button type="submit" name="b4" >4</button>
+        <button type="submit" name="b5" >5</button>
+        <button type="submit" name="b6" >6</button>
+        <button type="submit" name="b7" >7</button>
+        <button type="submit" name="b8" >8</button>
+        <button type="submit" name="b9" >9</button>
+        <button type="submit" name="b0" >0</button>
+        <select name="operador" id="">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="submit" value="=">
+    </form> -->
