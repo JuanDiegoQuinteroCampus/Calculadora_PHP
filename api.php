@@ -30,9 +30,9 @@
 
     
 
-    $num1 = intval($_POST['num1']);
-    $num2 = intval($_POST['num2']);
-    $operador = $_POST['operación'];
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $operacion = $_POST['operación'];
 
     if(!is_numeric($num1) && !is_numeric($num2)){
         echo "Agrega los números";
@@ -41,7 +41,7 @@
     }elseif(!is_numeric($num2)){
         echo "Agrega el segundo número";
     }else{
-        switch ($operador) {
+        switch ($operacion) {
             case '+':
                 $solucion = $num1 + $num2 ;
                 $todo = "de la suma es {$solucion}";
@@ -55,7 +55,12 @@
                 $todo = "de la multiplicación es {$solucion}";
                 break;
             case '/':
-                $solucion = $num1 / $num2 ;
+                $solucion = $num2 != 0 ? $num1 / $num2 :NAN ;
+                if (!is_nan($solucion)) {
+                    
+                } else {
+                    echo "Error: División por cero. ";
+                }
                 $todo = "de la división es {$solucion}";
                 break; 
             case '%':
