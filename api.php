@@ -10,7 +10,7 @@
 <body>
     <form action="api.php" method="post">
         <input type="text" pattern="[0-9-.-,]+" name="num1">
-        <select name="operación" id="">
+        <select name="operacion">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
@@ -27,10 +27,10 @@
     echo "Datos en post\n";
     print_r($_POST);
  */
-
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     $num1 = $_POST['num1'];
     $num2 = $_POST['num2'];
-    $operacion = $_POST['operación'];
+    $operacion = $_POST['operacion'];
 
     if(!is_numeric($num1) && !is_numeric($num2)){
         echo "Agrega los números";
@@ -39,6 +39,7 @@
     }elseif(!is_numeric($num2)){
         echo "Agrega el segundo número";
     }else{
+        $todo = "";
         switch ($operacion) {
             case '+':
                 $solucion = $num1 + $num2 ;
@@ -72,7 +73,7 @@
     
         echo "El resultado {$todo}";
     };
-
+}
 ?>
 </body>
 </html>
